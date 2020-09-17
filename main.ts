@@ -1,5 +1,32 @@
 input.onButtonPressed(Button.A, function () {
-	
+    i = leds
+    while (i != 0) {
+        basic.pause(s_main / leds * 75)
+        i += -1
+        strip.setPixelColor(i, neopixel.colors(NeoPixelColors.Green))
+        strip.show()
+    }
+    i = leds
+    while (i != 0) {
+        basic.pause(s_grace / leds * 100)
+        i += -1
+        strip.setPixelColor(i, neopixel.colors(NeoPixelColors.Orange))
+        strip.show()
+    }
+    i = leds
+    while (i != 0) {
+        basic.pause(s_final / leds * 100)
+        i += -1
+        strip.setPixelColor(i, neopixel.colors(NeoPixelColors.Red))
+        strip.show()
+    }
+    for (let index = 0; index < 6; index++) {
+        strip.showColor(neopixel.colors(NeoPixelColors.Red))
+        basic.pause(500)
+        strip.clear()
+        strip.show()
+        basic.pause(500)
+    }
 })
 input.onButtonPressed(Button.B, function () {
     i = leds
@@ -24,11 +51,11 @@ input.onButtonPressed(Button.B, function () {
         strip.show()
     }
     for (let index = 0; index < 6; index++) {
-        basic.pause(500)
         strip.showColor(neopixel.colors(NeoPixelColors.Red))
         basic.pause(500)
         strip.clear()
         strip.show()
+        basic.pause(500)
     }
 })
 let i = 0
