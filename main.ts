@@ -39,9 +39,9 @@ let strip: neopixel.Strip = null
 let leds = 0
 leds = 16
 strip = neopixel.create(DigitalPin.P0, leds, NeoPixelMode.RGB)
-s_main = 10
-s_grace = 10
-s_final = 10
+s_main = 240
+s_grace = 30
+s_final = 30
 basic.forever(function () {
 	
 })
